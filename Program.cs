@@ -6,7 +6,7 @@ int taskId = 1;
 while (true)
 {
 	Console.Clear();
-	Console.WriteLine("=== TODO LIST MANAGER ===");
+	Console.WriteLine("=== ⋆｡°✩ TODO LIST MANAGER ⋆｡°✩ ===");
 
 	Console.ForegroundColor = ConsoleColor.Red;
 	Console.Write("1");

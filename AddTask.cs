@@ -3,35 +3,29 @@ using System
 void AddTask()
 {
 	Console.Clear();
-	Console.WriteLine("=== ADD A NEW TASK ===");
+	Console.WriteLine("=== ⋆｡°✩ ADD A NEW TASK ⋆｡°✩ ===");
 
-	// Título da tarefa
 	Console.Write("Enter task title: ");
 	string? title = Console.ReadLine();
 
-	// Descrição (opcional)
 	Console.Write("Enter task description (optional): ");
 	string? description = Console.ReadLine();
 
-	// Definir prioridade com validação e cores
 	Priority priority;
 	while (true)
 	{
 		Console.WriteLine("Select priority:");
 
-		// High - vermelho
 		Console.ForegroundColor = ConsoleColor.Red;
-		Console.WriteLine("1. High");
+		Console.WriteLine("1. Urgent");
 		Console.ResetColor();
 
-		// Medium - amarelo
 		Console.ForegroundColor = ConsoleColor.Yellow;
-		Console.WriteLine("2. Medium");
+		Console.WriteLine("2. Normal");
 		Console.ResetColor();
 
-		// Low - verde
 		Console.ForegroundColor = ConsoleColor.Green;
-		Console.WriteLine("3. Low");
+		Console.WriteLine("3. Later");
 		Console.ResetColor();
 
 		Console.Write("Choice (1-3): ");
@@ -39,23 +33,21 @@ void AddTask()
 
 		if (priorityInput == "1")
 		{
-			priority = Priority.High;
+			priority = Priority.Urgent;
 			break;
 		}
 		else if (priorityInput == "2")
 		{
-			priority = Priority.Medium;
+			priority = Priority.Normal;
 			break;
 		}
 		else if (priorityInput == "3")
 		{
-			priority = Priority.Low;
+			priority = Priority.Later;
 			break;
 		}
 		else
-		{
-			Console.WriteLine("Invalid choice, please select 1, 2 or 3.");
-		}
+			Console.WriteLine("Invalid choice ˙◠˙, please select 1, 2 or 3.");
 	}
 
 	// Criar nova tarefa
@@ -64,6 +56,6 @@ void AddTask()
 	// Adicionar tarefa à lista
 	tasks.Add(newTask);
 
-	Console.WriteLine("\nTask added successfully! Press Enter to return to menu.");
+	Console.WriteLine("\nTask added successfully! ★彡 Press Enter to return to menu.");
 	Console.ReadLine();
 }
